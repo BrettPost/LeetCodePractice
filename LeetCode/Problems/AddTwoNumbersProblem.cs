@@ -1,4 +1,4 @@
-﻿using LeetCode.Objects;
+﻿using LeetCode.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
