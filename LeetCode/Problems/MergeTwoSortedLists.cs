@@ -47,19 +47,13 @@ namespace LeetCode.Problems
 
             if (list1.val <= list2.val)
             {
-                return new ListNode()
-                {
-                    val = list1.val,
-                    next = MergeTwoLists(list1.next, list2)
-                };
+                list1.next = MergeTwoLists(list1.next, list2);
+                return list1;
             }
             else
             {
-                return new ListNode()
-                {
-                    val = list2.val,
-                    next = MergeTwoLists(list1, list2.next)
-                };
+                list2.next = MergeTwoLists(list1, list2.next);
+                return list2;
             }
         }
     }
