@@ -33,6 +33,7 @@ namespace LeetCode.Problems
                     return false;
                 }
 
+                // Dictionary could get rid of the switch code
                 switch (stack.Pop())
                 {
                     case '(':

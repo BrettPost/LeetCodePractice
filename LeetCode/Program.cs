@@ -5,8 +5,9 @@ using LeetCode.Problems;
 Console.WriteLine("Hello, World!");
 
 
-ValidParentheses validParentheses = new();
-
-Console.WriteLine(validParentheses.IsValid(validParentheses.testing));
+MergeTwoSortedLists mergeTwoSortedLists = new();
+var exampleLists = mergeTwoSortedLists.GiveTwoNodeLists();
+var result = mergeTwoSortedLists.MergeTwoLists(exampleLists.Item1, exampleLists.Item2);
+Console.WriteLine(result);
 
 
