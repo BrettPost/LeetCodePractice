@@ -5,9 +5,8 @@ using LeetCode.Problems;
 Console.WriteLine("Hello, World!");
 
 
-MergeTwoSortedLists mergeTwoSortedLists = new();
-var exampleLists = mergeTwoSortedLists.GiveTwoNodeLists();
-var result = mergeTwoSortedLists.MergeTwoLists(exampleLists.Item1, exampleLists.Item2);
-Console.WriteLine(result);
+LengthOfLastWord lengthOfLastWord = new();
+var lengthOfWord = lengthOfLastWord.GetWordLength("Hellofadfad  ");
+Console.WriteLine(lengthOfWord);
 
 

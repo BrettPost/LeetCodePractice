@@ -56,5 +56,10 @@ namespace LeetCode.Problems
                 return list2;
             }
         }
+        
+        // MergeTwoSortedLists mergeTwoSortedLists = new();
+        // var exampleLists = mergeTwoSortedLists.GiveTwoNodeLists();
+        // var result = mergeTwoSortedLists.MergeTwoLists(exampleLists.Item1, exampleLists.Item2);
+        // Console.WriteLine(result);
     }
 }
