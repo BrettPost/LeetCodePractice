@@ -5,8 +5,7 @@ using LeetCode.Problems;
 Console.WriteLine("Hello, World!");
 
 
-LengthOfLastWord lengthOfLastWord = new();
-var lengthOfWord = lengthOfLastWord.GetWordLength("Hellofadfad  ");
-Console.WriteLine(lengthOfWord);
-
+Sqrt sqrt = new();
+var ans = sqrt.MySqrt(4);
+Console.WriteLine(ans);
 
