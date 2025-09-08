@@ -19,7 +19,7 @@ namespace LeetCode.Problems
             {
                 while (nums[i] == val)
                 {
-                    if (i == k) { break; }
+                    if (i == k) { return k; }
                     //swap
                     int temp = nums[i];
                     nums[i] = nums[k];
