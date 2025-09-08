@@ -5,6 +5,10 @@ namespace LeetCode.Problems
         // given num x return it's sqaure root rounded down to it's nearest int
         // no negatives
 
+        //Sqrt sqrt = new();
+        //var ans = sqrt.MySqrt(4);
+        //Console.WriteLine(ans);
+
         public int MySqrt(int x)
         {
             if (x < 2) { return x; }
