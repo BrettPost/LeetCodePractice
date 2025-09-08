@@ -13,22 +13,16 @@ namespace LeetCode.Problems
 
         public int RemoveElement(int[] nums, int val)
         {
-            int k = nums.Length - 1;
-
-            for (int i = 0; i < k + 1; i++)
+            int k = 0;
+            for (int i = 0; i < nums.Length; i++)
             {
-                while (nums[i] == val)
+                if (nums[i] != val)
                 {
-                    if (i == k) { return k; }
-                    //swap
-                    int temp = nums[i];
-                    nums[i] = nums[k];
-                    nums[k] = temp;
-                    k--;
+                    nums[k] = nums[i];
+                    k++;
                 }
             }
-
-            return k + 1;
+            return k;
         }
     }
 }
