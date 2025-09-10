@@ -5,5 +5,5 @@ using LeetCode.Problems;
 Console.WriteLine("Hello, World!");
 
 PalindromeNumber palindromeNumber = new();
-Console.WriteLine(palindromeNumber.IsPalindrome(-2));
+Console.WriteLine(palindromeNumber.IsPalindrome(7123217));
 
