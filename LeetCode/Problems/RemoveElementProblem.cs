@@ -10,6 +10,12 @@ namespace LeetCode.Problems
         // return k
         // alter nums such that the first k elements are not val (elements after this do not matter, and size does not matter
 
+        //int[] nums = [3, 2, 2, 3];
+        //int value = 3;
+        //RemoveElementProblem removeElementProblem = new();
+        //var result = removeElementProblem.RemoveElement(nums, value);
+        //Console.WriteLine(result);
+
 
         public int RemoveElement(int[] nums, int val)
         {
