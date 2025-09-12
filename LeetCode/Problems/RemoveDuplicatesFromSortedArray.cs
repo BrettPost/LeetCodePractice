@@ -14,26 +14,21 @@ namespace LeetCode.Problems
 
         public int RemoveDuplicates(int[] nums)
         {
-            int dupCounter = 0;
-            int current = int.MinValue;
-
-            for (int i = 0; i < nums.Length - dupCounter; i++)
+            if (nums.Length == 0)
             {
-                if (nums[i] != current)
+                return 0;
+            }
+
+            int j = 0;
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[j] != nums[i])
                 {
-                    current = nums[i];
-                } else
-                {
-                    for (int j = i; j < nums.Length - dupCounter - 1; j++)
-                    {
-                        nums[j] = nums[j + 1];
-                    }
-                    dupCounter++;
-                    i--;
+                    nums[++j] = nums[i];
                 }
             }
 
-            return nums.Length - dupCounter;
+            return j + 1;
         }
     }
 }
