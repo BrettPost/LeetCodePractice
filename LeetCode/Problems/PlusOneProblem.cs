@@ -17,7 +17,7 @@ namespace LeetCode.Problems
                 if (digits[i] != 9)
                 {
                     digits[i] += 1;
-                    if (digits[i] != 10) { return digits; }
+                    return digits;
                 }
                 else
                 {
