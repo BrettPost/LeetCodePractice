@@ -8,6 +8,11 @@ namespace LeetCode.Problems
 {
     internal class SearchInsertPosition
     {
+        //int[] nums = [1, 7, 16, 23, 37, 44, 59];
+        //int value = 22;
+        //SearchInsertPosition searchInsert = new();
+        //Console.WriteLine(searchInsert.SearchInsert(nums, value));
+
         public int SearchInsert(int[] nums, int target)
         {
             int left = 0;
