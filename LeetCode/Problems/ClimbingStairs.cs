@@ -20,8 +20,15 @@ namespace LeetCode.Problems
 
         public int ClimbStairs(int n)
         {
-            if (n <= 3) { return n; }
-            return ClimbStairs(n - 1) + ClimbStairs(n - 2);
+            if (n <= 1) return 1;
+            int firstNum = 1, secondNum = 1, thirdNum = 0;
+            for (int i = 2; i < n + 1; i++)
+            {
+                thirdNum = firstNum + secondNum;
+                firstNum = secondNum;
+                secondNum = thirdNum;
+            }
+            return thirdNum;
         }
     }
 }
