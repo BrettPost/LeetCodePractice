@@ -4,6 +4,6 @@ using LeetCode.Problems;
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-AddBinaryProblem addBinaryProblem = new();
-var result = addBinaryProblem.AddBinary("11", "101011"); // 233 + 170 = 403 -> 110010011
+ClimbingStairs climbingStairs = new();
+var result = climbingStairs.ClimbStairs(43);
 Console.WriteLine(result);

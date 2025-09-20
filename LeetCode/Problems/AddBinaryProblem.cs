@@ -14,6 +14,10 @@ namespace LeetCode.Problems
 
         public string AddBinary(string a, string b)
         {
+            // AddBinaryProblem addBinaryProblem = new();
+            // var result = addBinaryProblem.AddBinary("11", "101011"); // 233 + 170 = 403 -> 110010011
+            // Console.WriteLine(result);
+
             int i = a.Length - 1;
             int j = b.Length - 1;
             int carry = 0;
