@@ -14,90 +14,24 @@ namespace LeetCode.Problems
 
         public string AddBinary(string a, string b)
         {
-            if (a.Length == 0 && b.Length == 0)
-            {
-                return "0";
-            }
-            var length = int.Max(a.Length, b.Length);
-            var answer = "";
-            bool carry = false;
+            int i = a.Length - 1;
+            int j = b.Length - 1;
+            int carry = 0;
+            var result = new System.Text.StringBuilder();
 
-            for (int i = 0; i < length; i++)
-            {
-                int addPos = 0;
-                if (a.Length <= i)
-                {
-                    addPos = carry ? b[b.Length - 1 - i] - '0' + 1 : b[b.Length - 1 - i] - '0';
+            while (i >= 0 || j >= 0 || carry > 0) {
+                int bitA = (i >= 0) ? a[i] - '0' : 0;
+                int bitB = (j >= 0) ? b[j] - '0' : 0;
 
-                    if (addPos == 0)
-                    {
-                        answer = "0" + answer;
-                        carry = false;
-                    }
-                    else if (addPos == 1)
-                    {
-                        answer = "1" + answer;
-                        carry = false;
-                    }
-                    else if (addPos == 2)
-                    {
-                        answer = "0" + answer;
-                        carry = true;
-                    }
-                }
-                else if (b.Length <= i)
-                {
-                    addPos = carry ? a[a.Length - 1 - i] - '0' + 1 : a[a.Length - 1 - i] - '0';
+                int sum = bitA + bitB + carry;
+                result.Insert(0, (sum % 2).ToString()); // Append result bit
+                carry = sum / 2; // Update carry
 
-                    if (addPos == 0)
-                    {
-                        answer = "0" + answer;
-                        carry = false;
-                    }
-                    else if (addPos == 1)
-                    {
-                        answer = "1" + answer;
-                        carry = false;
-                    }
-                    else if (addPos == 2)
-                    {
-                        answer = "0" + answer;
-                        carry = true;
-                    }
-                }
-                else
-                {
-                    addPos = carry ? a[a.Length - 1 - i] - '0' + (b[b.Length - 1 - i] - '0') + 1 : a[a.Length - 1 - i] - '0' + (b[b.Length - 1 - i] - '0');
-
-                    if (addPos == 0)
-                    {
-                        answer = "0" + answer;
-                        carry = false;
-                    }
-                    else if (addPos == 1)
-                    {
-                        answer = "1" + answer;
-                        carry = false;
-                    }
-                    else if (addPos == 2)
-                    {
-                        answer = "0" + answer;
-                        carry = true;
-                    }
-                    else if (addPos == 3)
-                    {
-                        answer = "1" + answer;
-                        carry = true;
-                    }
-                }
+                i--;
+                j--;
             }
 
-            
-            if (carry)
-            {
-                return "1" + answer;
-            }
-            return answer;
+            return result.ToString();
         }
     }
 }

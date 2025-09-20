@@ -5,5 +5,5 @@ using LeetCode.Problems;
 Console.WriteLine("Hello, World!");
 
 AddBinaryProblem addBinaryProblem = new();
-var result = addBinaryProblem.AddBinary("", ""); // 233 + 170 = 403 -> 110010011
+var result = addBinaryProblem.AddBinary("11", "101011"); // 233 + 170 = 403 -> 110010011
 Console.WriteLine(result);
