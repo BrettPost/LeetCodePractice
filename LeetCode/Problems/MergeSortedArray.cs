@@ -3,56 +3,31 @@ namespace LeetCode.Problems
     public class MergeSortedArray
     {
 
-        // nums1 -> num of elements m
-        // nums2 -> num of elements n
-        // Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-        // Output: [1,2,2,3,5,6]
+        //int[] nums1 = [1, 2, 3, 0, 0, 0];
+        //int[] nums2 = [2, 5, 6];
+
+        //int[] nums1 = [4, 5, 6, 0, 0, 0];
+        //int[] nums2 = [1, 2, 3];
+        //int m = 3;
+        //int n = 3;
+
+        //MergeSortedArray mergeSortedArray = new();
+        //mergeSortedArray.Merge(nums1, m, nums2, n);
 
         public void Merge(int[] nums1, int m, int[] nums2, int n)
         {
             for (var i = 0; i < n; i++)
             {
-                nums1 = FindPos(nums1, nums2[i], n - 1 - i);
+                int j = nums1.Length - 1 - (n - 1 - i);
+                while (j > 0 && nums1[j - 1] > nums2[i])
+                {
+                    nums1[j] = nums1[j - 1];
+                    j--;
+                }
+                nums1[j] = nums2[i];
             }
 
-            print(nums1);
-        }
-
-        private int[] FindPos(int[] nums, int val, int shift)
-        {
-            var left = 0;
-            var right = nums.Length - 1 - shift;
-            var mid = 0;
-
-            while (left <= right)
-            {
-                mid = left + (right - left) / 2;
-
-                if (nums[mid] == val)
-                {
-                    for (var i = nums.Length - 1 - shift; i > mid; i--)
-                    {
-                        nums[i] = nums[i - 1];
-                    }
-                    nums[mid] = val;
-                    return nums;
-                }
-                else if (nums[mid] > val)
-                {
-                    right = mid - 1;
-                }
-                else
-                {
-                    left = mid + 1;
-                }
-            }
-
-            for (var i = nums.Length - 1 - shift; i > mid; i--)
-            {
-                nums[i] = nums[i - 1];
-            }
-            nums[mid] = val;
-            return nums;
+            //print(nums1);
         }
 
         private void print(int[] nums)
