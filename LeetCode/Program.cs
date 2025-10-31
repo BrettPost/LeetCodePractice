@@ -15,3 +15,6 @@ Console.WriteLine("Hello, World!");
 
 // MergeSortedArray mergeSortedArray = new();
 // mergeSortedArray.Merge(nums1, m, nums2, n);
+
+DepthFirstSearch depthFirstSearch = new();
+depthFirstSearch.Example(depthFirstSearch.graphExample, 0, depthFirstSearch.checkExample);

@@ -5,7 +5,7 @@ namespace LeetCode.Practice
         public int[] nums = [2, 4, 7, 9];
         public int value = 8;
 
-        public int example(int[] numArray, int find)
+        public int Example(int[] numArray, int find)
         {
             int left = 0;
             int right = numArray.Length - 1;
